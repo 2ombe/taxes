@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   FaCalculator, FaChartLine, FaUser, FaFileInvoiceDollar,
-  FaHistory, FaBell, FaRobot, FaArrowRight, FaCheckCircle
+  FaHistory, FaBell, FaRobot, FaArrowRight, FaCheckCircle,
+  FaUniversity, FaCoins
 } from 'react-icons/fa';
-import { MdOutlineTax, MdAccountBalance } from 'react-icons/md';
 import { useAuth } from '../context/AuthContext';
 import TaxCalendar from '../components/common/TaxCalendar';
 
@@ -39,9 +39,9 @@ const HealthScoreRing = ({ score, color = '#006F46' }) => {
 
 const SHORTCUT_TILES = [
   { to: '/tax-engine', icon: <FaCalculator size={28} />, label: 'CIT Engine', sub: 'Corporate Income Tax', bg: '#e8f5ee', color: '#006F46' },
-  { to: '/vat', icon: <MdOutlineTax size={28} />, label: 'VAT Calculator', sub: '18% Rwanda VAT', bg: '#fff3cd', color: '#d97706' },
+  { to: '/vat', icon: <FaCoins size={28} />, label: 'VAT Calculator', sub: '18% Rwanda VAT', bg: '#fff3cd', color: '#d97706' },
   { to: '/paye', icon: <FaUser size={28} />, label: 'PAYE Calculator', sub: '2025 Tax Bands', bg: '#e0f2fe', color: '#0284c7' },
-  { to: '/wht', icon: <MdAccountBalance size={28} />, label: 'WHT Calculator', sub: 'Art. 43–52 Rates', bg: '#fce7f3', color: '#be185d' },
+  { to: '/wht', icon: <FaUniversity size={28} />, label: 'WHT Calculator', sub: 'Art. 43–52 Rates', bg: '#fce7f3', color: '#be185d' },
 ];
 
 const Dashboard = () => {
@@ -114,7 +114,7 @@ const Dashboard = () => {
                   {[
                     { label: 'Accounting Profit', value: formatRWF(taxData.accountingProfit || 0), icon: <FaChartLine />, bg: '#e8f5ee', color: '#006F46' },
                     { label: 'TB Items', value: `${(taxData.trialBalance || []).length} accounts`, icon: <FaFileInvoiceDollar />, bg: '#e0f2fe', color: '#0284c7' },
-                    { label: 'Fixed Assets', value: `${(taxData.assets || []).length} assets`, icon: <MdAccountBalance />, bg: '#fff3cd', color: '#d97706' },
+                    { label: 'Fixed Assets', value: `${(taxData.assets || []).length} assets`, icon: <FaUniversity />, bg: '#fff3cd', color: '#d97706' },
                   ].map((s, i) => (
                     <Col md={4} key={i}>
                       <Card className="stat-card border-0 p-3">
@@ -204,7 +204,7 @@ const Dashboard = () => {
                     <FaCalculator /> Open CIT Engine
                   </Button>
                   <Button as={Link} to="/vat" variant="outline-primary" className="rounded-pill text-start d-flex align-items-center gap-2">
-                    <MdOutlineTax /> VAT Return
+                    <FaCoins /> VAT Return
                   </Button>
                   <Button as={Link} to="/paye" variant="outline-secondary" className="rounded-pill text-start d-flex align-items-center gap-2">
                     <FaUser /> PAYE Calculation

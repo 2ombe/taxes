@@ -1,8 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Container, Row, Col, Card, Form, Button, Table, Alert, Badge } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaCalculator, FaDownload, FaInfoCircle, FaPlus, FaTrash, FaFilePdf } from 'react-icons/fa';
-import { MdAccountBalance } from 'react-icons/md';
+import { FaCalculator, FaDownload, FaInfoCircle, FaPlus, FaTrash, FaFilePdf, FaUniversity } from 'react-icons/fa';
 import { WHTEngine } from '../utils/tax-engine/whtEngine.js';
 import * as XLSX from 'xlsx';
 
@@ -88,7 +87,7 @@ const WHTCalculator = () => {
             </Col>
             <Col xs="auto" className="d-none d-md-block">
               <div className="p-3 rounded-circle bg-white bg-opacity-10 d-flex align-items-center justify-content-center" style={{ width: 80, height: 80 }}>
-                <MdAccountBalance size={36} className="text-white" />
+                <FaUniversity size={36} className="text-white" />
               </div>
             </Col>
           </Row>

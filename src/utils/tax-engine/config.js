@@ -1,4 +1,23 @@
-import { CIT_CONFIG } from './config.js';
+export const CIT_CONFIG = {
+  TAX_RATE: 0.30, // Standard 30% CIT rate in Rwanda
+  LOSS_CARRYFORWARD_YEARS: 5, // Article 31: 5-year limit
+
+  DEPRECIATION_CATEGORIES: [
+    { id: 'cat1', name: 'Land & Buildings', taxRate: 0.05, article: 'Article 28(1)' },
+    { id: 'cat2', name: 'Furniture & Equipment', taxRate: 0.10, article: 'Article 28(2)' },
+    { id: 'cat3', name: 'Heavy Machinery & Vehicles', taxRate: 0.25, article: 'Article 28(3)' },
+    { id: 'cat4', name: 'Computers & Software', taxRate: 0.50, article: 'Article 28(4)' },
+    { id: 'cat5', name: 'Other Assets (General)', taxRate: 0.20, article: 'Article 28(5)' },
+  ],
+
+  NON_DEDUCTIBLE_RULES: [
+    { pattern: /fines|penalties|penalty/i, reason: 'Fines and penalties', article: 'Article 25(1)' },
+    { pattern: /donation|charity/i, reason: 'Non-qualifying donations', article: 'Article 25(2)' },
+    { pattern: /personal|director.*expense|private/i, reason: 'Personal or private expenses', article: 'Article 25(3)' },
+    { pattern: /entertainment|hospitality/i, reason: 'Entertainment expenses beyond allowable limits', article: 'Article 25(4)' },
+    { pattern: /provision|contingency/i, reason: 'General provisions (not realized)', article: 'Article 25(5)' },
+  ],
+};
 
 export const VAT_CONFIG = {
   STANDARD_RATE: 0.18,   // 18% Rwanda VAT
@@ -47,5 +66,3 @@ export const WHT_CONFIG = {
     { id: 'lottery',       label: 'Lottery / Gambling winnings',        rate: 0.15, article: 'Article 52' },
   ],
 };
-
-export { CIT_CONFIG };

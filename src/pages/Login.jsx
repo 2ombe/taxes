@@ -3,12 +3,11 @@ import { Row, Col, Form, Button, Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext.jsx';
-import { FaLock, FaEnvelope, FaCheckCircle, FaRobot, FaCalculator } from 'react-icons/fa';
-import { MdOutlineTax } from 'react-icons/md';
+import { FaLock, FaEnvelope, FaCheckCircle, FaRobot, FaCalculator, FaCoins } from 'react-icons/fa';
 
 const BRAND_FEATURES = [
   { icon: <FaCalculator size={16} />, label: 'CIT Engine — Articles 24–31' },
-  { icon: <MdOutlineTax size={16} />, label: 'VAT, PAYE & WHT Calculators' },
+  { icon: <FaCoins size={16} />, label: 'VAT, PAYE & WHT Calculators' },
   { icon: <FaRobot size={16} />, label: 'Gemini AI Tax Advisor' },
   { icon: <FaCheckCircle size={16} />, label: 'Full Audit Trail & Export' },
 ];

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Button, NavDropdown } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaBars, FaSignOutAlt, FaUser, FaTachometerAlt, FaChevronDown } from 'react-icons/fa';
-import { MdOutlineTax, MdAccountBalance } from 'react-icons/md';
+import { FaBars, FaSignOutAlt, FaUser, FaTachometerAlt, FaChevronDown, FaFileInvoiceDollar, FaUniversity } from 'react-icons/fa';
 import { useAuth } from '../../context/AuthContext';
 
 const TAX_TOOLS = [

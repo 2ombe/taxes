@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import {
   FaGlobeAfrica, FaHandshake, FaChartLine, FaCalculator,
-  FaCheckCircle, FaArrowRight, FaRobot, FaShieldAlt, FaStar
+  FaCheckCircle, FaArrowRight, FaRobot, FaShieldAlt, FaStar,
+  FaCoins, FaUniversity
 } from 'react-icons/fa';
-import { MdOutlineTax, MdAccountBalance } from 'react-icons/md';
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } };
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
@@ -23,9 +23,9 @@ const AnimatedSection = ({ children, className = '' }) => {
 
 const TAX_FEATURES = [
   { icon: <FaCalculator size={26} />, title: 'CIT Engine', desc: 'Articles 24–31 applied automatically. Upload your trial balance and get a full computation in seconds.', to: '/tax-engine', color: '#006F46', bg: '#e8f5ee', badge: 'Core Feature' },
-  { icon: <MdOutlineTax size={26} />, title: 'VAT Calculator', desc: '18% standard rate. Zero-rated exports. Exempt supply apportionment. Full RRA return breakdown.', to: '/vat', color: '#d97706', bg: '#fff3cd', badge: 'Free' },
+  { icon: <FaCoins size={26} />, title: 'VAT Calculator', desc: '18% standard rate. Zero-rated exports. Exempt supply apportionment. Full RRA return breakdown.', to: '/vat', color: '#d97706', bg: '#fff3cd', badge: 'Free' },
   { icon: <FaChartLine size={26} />, title: 'PAYE Calculator', desc: '2025 monthly tax bands with RSSB, CBHI deductions. Single employee or full payroll run.', to: '/paye', color: '#0284c7', bg: '#e0f2fe', badge: 'Free' },
-  { icon: <MdAccountBalance size={26} />, title: 'WHT Calculator', desc: 'All 9 WHT categories — dividends, interest, royalties, services. Treaty-rate support included.', to: '/wht', color: '#be185d', bg: '#fce7f3', badge: 'Free' },
+  { icon: <FaUniversity size={26} />, title: 'WHT Calculator', desc: 'All 9 WHT categories — dividends, interest, royalties, services. Treaty-rate support included.', to: '/wht', color: '#be185d', bg: '#fce7f3', badge: 'Free' },
 ];
 
 const STATS = [

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Form, Button, Table, Badge, Alert } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaCalculator, FaInfoCircle, FaFileDownload, FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
-import { MdOutlineTax, MdPercent } from 'react-icons/md';
+import { FaCalculator, FaInfoCircle, FaFileDownload, FaCheckCircle, FaTimesCircle, FaCoins, FaPercent } from 'react-icons/fa';
 import { VATEngine, VAT_CONFIG } from '../utils/tax-engine/vatEngine.js';
 import * as XLSX from 'xlsx';
 
@@ -63,7 +62,7 @@ const VATCalculator = () => {
             </Col>
             <Col xs="auto" className="d-none d-md-block">
               <div className="p-3 rounded-circle bg-white bg-opacity-10 d-flex align-items-center justify-content-center" style={{ width: 80, height: 80 }}>
-                <MdOutlineTax size={40} className="text-white" />
+                <FaCoins size={40} className="text-white" />
               </div>
             </Col>
           </Row>
